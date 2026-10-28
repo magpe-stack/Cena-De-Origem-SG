@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#2f4a6d">
+  <meta name="description" content="Criador de Cena de Origem baseado na metodologia Story Genius. Funciona offline.">
+  <title>Cena de Origem · Story Genius</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <p class="sobretitulo">Story Genius</p>
+      <h1>Cena de Origem</h1>
+      <p class="subtitulo">Sete passos para descobrir o evento que moldou a falsa crença do seu personagem.</p>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <noscript>
+      <p class="aviso">Este aplicativo precisa de JavaScript ativado para funcionar.</p>
+    </noscript>
+
+    <section class="cartao" aria-labelledby="rotulo-titulo">
+      <label id="rotulo-titulo" class="rotulo" for="campo-titulo">Personagem ou projeto (opcional)</label>
+      <input type="text" id="campo-titulo" class="entrada-titulo" autocomplete="off" placeholder="Ex.: Nick, o robô-guia">
+    </section>
+
+    <form id="formulario" class="passos" novalidate onsubmit="return false"></form>
+
+    <section class="cartao exportar" aria-labelledby="titulo-exportar">
+      <h2 id="titulo-exportar">Exportar</h2>
+      <p class="ajuda">Seus textos ficam salvos automaticamente neste navegador. Exporte para guardar ou levar para outro lugar.</p>
+      <div class="botoes">
+        <button type="button" class="botao" id="exportar-json">JSON</button>
+        <button type="button" class="botao" id="exportar-md">Markdown</button>
+        <button type="button" class="botao" id="exportar-txt">TXT</button>
+        <button type="button" class="botao" id="exportar-docx">Word (.docx)</button>
+      </div>
+      <div class="rodape-acoes">
+        <span id="estado-salvo" class="estado-salvo" role="status" aria-live="polite">Nada salvo ainda</span>
+        <button type="button" class="botao-texto" id="limpar">Limpar tudo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Aplicativo local e offline. Nenhum dado sai do seu dispositivo.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
