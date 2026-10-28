@@ -1,0 +1,22 @@
+{
+  "name": "Cena de Origem · Story Genius",
+  "short_name": "Cena de Origem",
+  "description": "Criador de Cena de Origem baseado na metodologia Story Genius. Funciona offline.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "id": "./index.html",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f3ee",
+  "theme_color": "#2f4a6d",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
